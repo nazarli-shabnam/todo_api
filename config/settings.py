@@ -49,6 +49,7 @@ REST_FRAMEWORK = {
 INSTALLED_APPS = [
     'rest_framework',
     'tasks',
+    "jazzmin",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -90,16 +91,20 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# import os
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'todo_db',
-        'USER': 'postgres',
-        'PASSWORD': '123456789',  
-        'HOST': 'localhost',
+        'NAME': 'todo_db',            # matches POSTGRES_DB
+        'USER': 'postgres',           # matches POSTGRES_USER
+        'PASSWORD': '123456789',    # MUST match POSTGRES_PASSWORD
+        'HOST': 'db',                 # Docker container name
         'PORT': '5432',
     }
 }
+
+
 
 AUTH_USER_MODEL = 'tasks.User'
 

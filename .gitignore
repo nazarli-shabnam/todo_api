@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.log
+*.sqlite3
+.env
+venv/
+.env.*
+*.egg-info/
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+*.pot
+*.mo
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Docker
+*.pid
+*.log
+docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Postgres Docker volumes
+postgres_data/
